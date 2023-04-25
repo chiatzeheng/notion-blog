@@ -38,37 +38,37 @@ export const PageHead: React.FC<
       {site && (
         <>
           <meta property='og:site_name' content={site.name} />
-          <meta property='twitter:domain' content={site.domain} />
+          <meta property='spotify:domain' content={site.domain} />
         </>
       )}
 
-      {config.twitter && (
-        <meta name='twitter:creator' content={`@${config.twitter}`} />
+      {config.spotify && (
+        <meta name='spotify:creator' content={`@${config.spotify}`} />
       )}
 
       {description && (
         <>
           <meta name='description' content={description} />
           <meta property='og:description' content={description} />
-          <meta name='twitter:description' content={description} />
+          <meta name='spotify:description' content={description} />
         </>
       )}
 
       {socialImageUrl ? (
         <>
-          <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:image' content={socialImageUrl} />
+          <meta name='spotify:card' content='summary_large_image' />
+          <meta name='spotify:image' content={socialImageUrl} />
           <meta property='og:image' content={socialImageUrl} />
         </>
       ) : (
-        <meta name='twitter:card' content='summary' />
+        <meta name='spotify:card' content='summary' />
       )}
 
       {url && (
         <>
           <link rel='canonical' href={url} />
           <meta property='og:url' content={url} />
-          <meta property='twitter:url' content={url} />
+          <meta property='spotify:url' content={url} />
         </>
       )}
 
@@ -80,7 +80,7 @@ export const PageHead: React.FC<
       />
 
       <meta property='og:title' content={title} />
-      <meta name='twitter:title' content={title} />
+      <meta name='spotify:title' content={title} />
       <title>{title}</title>
     </Head>
   )
